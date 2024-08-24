@@ -11,8 +11,10 @@ public class PlayerBase : MonoBehaviour
     public string nameObject;
     public float Damage;
     public float moveSpeed;
+    public float MoveX;
+    public float MoveY;
     public Rigidbody2D rb;
-    public float MoveX, MoveY;
+    public Animation animator;
 
     #endregion
 
@@ -26,6 +28,7 @@ public class PlayerBase : MonoBehaviour
 
     }
 
+
     public void Update()
     {
         HandleMovement();   
@@ -37,5 +40,7 @@ public class PlayerBase : MonoBehaviour
         MoveY = Input.GetAxisRaw("Vertical") * moveSpeed;
         rb.velocity = new Vector2(MoveX, MoveY);
     }
+
+
 
 }
