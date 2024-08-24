@@ -7,11 +7,14 @@ using UnityEngine;
 
 public class PlayerObject : ScriptableObject
 {
-    public string name;
-    public float Speed;
+    [Header("Variables")]
+    public string nameObject;
+    public float moveSpeed;
     public float Damage;
-    
 
+    [Header("Movement")]
+    public float MoveX;
+    public float MoveY;
 
 
 }
